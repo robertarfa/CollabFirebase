@@ -2,8 +2,33 @@ import { LOCALES } from '../constants';
 
 export default {
   [LOCALES.ENGLISH]: {
-    'edit-file': 'Edit {file} and save to reload.',
-    'Home_01': 'Hello',
-    'About_01': 'About Hello',
+    // Menu
+    'Menu_01': "Home",
+    'Menu_02': "Services",
+    'Menu_03': "Prices & Combos",
+    'Menu_04': "About Us",
+    'Menu_05': "Associations & Certificates",
+    'Menu_06': "Terms & Conditions",
+    // HomeHorizontalPanel
+    'HPHome_01': "We Simplify the Words",
+    'HPHome_02': "Professional translation service guaranteed by International Translators and",
+    'HPHome_03': "Reviewers specialized in different areas with many years of experience",
+    'HPHome_04': "Request a quote",
+    // HomeVerticalPanels
+    'VPHome_01': "TRANSLATION",
+    'VPHome_02': "We are able to translate and proofread any kind of document, from the simplest to technical or corporative content.",
+    'VPHome_03': "Read More",
+    'VPHome_04': "TRANSCRIPTION",
+    'VPHome_05': "Our professional native translators have many years of experience in different areas.",
+    'VPHome_06': "LOCALIZATION",
+    'VPHome_07': "Why simply translate the information, Websites or Apps, if you can count on us to be professional, timely, efficient and ensure that your target customers are being approached in the best way?",
+    'VPHome_08': "INTERPRETER",
+    'VPHome_09': "Nowadays technology allows us to communicate with everyone. Let us be your voice and help you interact with your clients, no matter what language they speak.",
+    //HomeHorizontalPanelNoBack
+    'HPNBHome_01': "Do you have a special project?",
+    'HPNBHome_02': "So, this is the right place for you. Get in touch, we can help you set up all kind of translation you may need.",
+    'HPNBHome_03': "Get in Touch",
+    //HomeVerticalPanelsV2
+
   },
 };

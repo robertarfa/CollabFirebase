@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import css from './styles.module.css'
 import Menu from '../../components/Menu/Menu'
 import HorizontalPanel from '../../components/HorizontalPanel/HorizontalPanel'
@@ -7,24 +7,36 @@ import { HomeCarousel } from '../../components/HomeCarousel/HomeCarousel'
 import HorizontalPanelNoBack from '../../components/HorizontalPanelNoBack/HorizontalPanelNoBack'
 import VerticalPanelsV2 from '../../components/VerticalPanelsV2/VerticalPanelsV2'
 
+import { FormattedMessage } from "react-intl";
+import { I18nPropvider } from '../../i18nProvider';
+import translate from "../../i18nProvider/translate";
+import { useSelector } from 'react-redux'
+
 export default function Home() {
+  const [locale, setLocale] = useState()
+
+  const languageAction = useSelector(state => state.languageAction)
+
+  useEffect(() => {
+
+    setLocale(languageAction.data.language)
+  }, [languageAction]);
+
   return (
-    <>
+    <I18nPropvider locale={locale} >
       <Menu />
 
       <HorizontalPanel
-        h1paragraph="We Simplify the Words"
-        firstParagraph=" Professional translation service guaranteed by International Translators
-        and"
-        secParagraph="Reviewers specialized in different areas with many years of experience"
-        txtButton="Request a quote"
+        h1paragraph={translate('HPHome_01')}
+        firstParagraph={translate('HPHome_02')}
+        secParagraph={translate('HPHome_03')}
+        txtButton={translate('HPHome_04')}
       />
 
       <div className={css.allCards}>
         <VerticalPanels
-          titleCard="TRANSLATION"
-          paragraph="We are able to translate and proofread any kind of document, from
-        the simplest to technical or corporative content."
+          titleCard={translate('VPHome_01')}
+          paragraph={translate('VPHome_02')}
           backgroudColor="#27BED5"
           iconColor="white"
           icon="article"
@@ -32,9 +44,8 @@ export default function Home() {
         />
 
         <VerticalPanels
-          titleCard="TRANSCRIPTION"
-          paragraph="Our professional native translators have many years of experience in
-          different areas."
+          titleCard={translate('VPHome_04')}
+          paragraph={translate('VPHome_05')}
           backgroudColor="#E80E9F"
           iconColor="white"
           icon="create"
@@ -42,10 +53,8 @@ export default function Home() {
         />
 
         <VerticalPanels
-          titleCard="LOCALIZATION"
-          paragraph="Why simply translate the information, Websites or Apps, if you can
-          count on us to be professional, timely, efficient and ensure that your
-          target customers are being approached in the best way?"
+          titleCard={translate('VPHome_06')}
+          paragraph={translate('VPHome_07')}
           backgroudColor="#EDEDED"
           iconColor="black"
           icon="location_on"
@@ -53,10 +62,8 @@ export default function Home() {
         />
 
         <VerticalPanels
-          titleCard="INTERPRETER"
-          paragraph="Nowadays technology allows us to communicate with everyone. Let us be
-          your voice and help you interact with your clients, no matter what
-          language they speak."
+          titleCard={translate('VPHome_08')}
+          paragraph={translate('VPHome_09')}
           backgroudColor="#FF9A00"
           iconColor="white"
           icon="textsms"
@@ -67,9 +74,9 @@ export default function Home() {
       <HomeCarousel />
 
       <HorizontalPanelNoBack
-        h1paragraph="Do you have a special project?"
-        firstParagraph="So, this is the right place for you. Get in touch, we can help you set up all kind of translation you may need."
-        txtButton="Get in Touch"
+        h1paragraph={translate('HPNBHome_01')}
+        firstParagraph={translate('HPNBHome_02')}
+        txtButton={translate('HPNBHome_03')}
       />
 
       <div className={css.allCards}>
@@ -94,7 +101,8 @@ export default function Home() {
           iconColor="white"
           icon="format_quote"
         />
+
       </div>
-    </>
+    </I18nPropvider>
   )
 }

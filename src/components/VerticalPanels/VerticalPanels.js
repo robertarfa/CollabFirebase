@@ -1,14 +1,11 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react'
 import css from './verticalPanels.module.css';
 
-export default function VerticalPanels(props: {
-  titleCard: any;
-  paragraph: any;
-  backgroudColor: any;
-  iconColor: any;
-  icon: any;
-  linkPage: any;
-}) {
+import { I18nPropvider } from '../../i18nProvider';
+import translate from "../../i18nProvider/translate";
+import { useSelector } from 'react-redux'
+
+export default function VerticalPanels(props) {
   const {
     titleCard,
     paragraph,
@@ -18,19 +15,30 @@ export default function VerticalPanels(props: {
     linkPage,
   } = props;
 
+  const [locale, setLocale] = useState()
+
+  const languageAction = useSelector(state => state.languageAction)
+
+  useEffect(() => {
+
+    setLocale(languageAction.data.language)
+  }, [languageAction]);
+
   return (
-    <div className={css.myCard} style={{ background: backgroudColor }}>
-      <div>
-        <span
-          className="material-icons"
-          style={{ fontSize: '4em', color: iconColor }}
-        >
-          {icon}
-        </span>
-        <h4 className={css.litleTitle}>{titleCard}</h4>
-        <p>{paragraph}</p>
-        <a href={linkPage}>Read More {'>'}</a>
+    <I18nPropvider locale={locale} >
+      <div className={css.myCard} style={{ background: backgroudColor }}>
+        <div>
+          <span
+            className="material-icons"
+            style={{ fontSize: '4em', color: iconColor }}
+          >
+            {icon}
+          </span>
+          <h4 className={css.litleTitle}>{titleCard}</h4>
+          <p>{paragraph}</p>
+          <a href={linkPage}>{translate('VPHome_03')} {'>'}</a>
+        </div>
       </div>
-    </div>
+    </I18nPropvider>
   );
 }
