@@ -29,6 +29,12 @@ export default {
     'HPNBHome_02': "So, this is the right place for you. Get in touch, we can help you set up all kind of translation you may need.",
     'HPNBHome_03': "Get in Touch",
     //HomeVerticalPanelsV2
+    'VP2Home_01': "The Staff works very fast and has a very professional attitude. I would hire them again for other projects",
+    'VP2Home_02': "Upwork client, Nov 2015 - Dec 2015",
+    'VP2Home_03': "Renata has confirmed her language knowledge, and has shown professionalism, flexibility and responsibility. Our team has had positive experiences from this collaboration since 2013, and she has become a valuable member of our staff of freelance translators.",
+    'VP2Home_04': "Silvia Bongirolami - Community Manager - Translated Dec.2019",
+    'VP2Home_05': "Localization of a Personality App Completed Successfully!",
+    'VP2Home_06': "Upwork client, Mar 2020 - Apr 2020",
 
   },
 };

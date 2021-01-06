@@ -32,39 +32,26 @@ export default function Flags() {
   ]);
 
   const [toggleContents, setToggleContents] = useState(<FlagIcon code={'us'} />);
-  const [selectedCountry, setSelectedCountry] = useState();
 
   return (
-    <div className="App">
-      <Form>
-        <Dropdown
-          onSelect={eventKey => {
-            const { code } = countries.find(({ code }) => eventKey === code);
+    <Form>
+      <Dropdown
+        onSelect={eventKey => {
+          const { code } = countries.find(({ code }) => eventKey === code);
 
-            setSelectedCountry(eventKey);
-            setToggleContents(<FlagIcon code={code} />);
-          }}
-        >
-          <Dropdown.Toggle variant="secondary" id="dropdown-flags" className="text-left" style={{ width: 300 }}>
-            {toggleContents}
-          </Dropdown.Toggle>
+          setToggleContents(<FlagIcon code={code} />);
+        }}
+      >
+        <Dropdown.Toggle id="dropdown-flags" className="text-left mx-3 my-2 w-auto" style={{ width: 300, background: 'transparent', border: 'none', color: 'black' }}>
+          {toggleContents}
+        </Dropdown.Toggle>
 
-          <Dropdown.Menu>
-            {countries.map(({ code, title }) => (
-              <Dropdown.Item key={code} eventKey={code} onClick={() => fntOnChangeLanguage(code)}><FlagIcon code={code} /></Dropdown.Item>
-            ))}
-          </Dropdown.Menu>
-        </Dropdown>
-      </Form>
-    </div>
+        <Dropdown.Menu>
+          {countries.map(({ code, title }) => (
+            <Dropdown.Item key={code} eventKey={code} onClick={() => fntOnChangeLanguage(code)}><FlagIcon code={code} /></Dropdown.Item>
+          ))}
+        </Dropdown.Menu>
+      </Dropdown>
+    </Form>
   );
-
-
-  // return (
-  //   <div>
-  //     <button onClick={() => fntOnChangeLanguage(LOCALES.ENGLISH)}>English</button>
-  //     <button onClick={() => fntOnChangeLanguage(LOCALES.FRENCH)}>French</button>
-  //     <button onClick={() => fntOnChangeLanguage(LOCALES.GERMAN)}>German</button>
-  //   </div>
-  // )
 }

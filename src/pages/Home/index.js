@@ -11,6 +11,7 @@ import { FormattedMessage } from "react-intl";
 import { I18nPropvider } from '../../i18nProvider';
 import translate from "../../i18nProvider/translate";
 import { useSelector } from 'react-redux'
+import HorizontalPanelHalf from '../../components/HorizontalPanelHalf/HorizontalPanelHalf'
 
 export default function Home() {
   const [locale, setLocale] = useState()
@@ -79,24 +80,27 @@ export default function Home() {
         txtButton={translate('HPNBHome_03')}
       />
 
+      <HorizontalPanelHalf
+      />
+
       <div className={css.allCards}>
         <VerticalPanelsV2
-          titleCard="The Staff works very fast and has a very professional attitude. I would hire them again for other projects"
-          paragraph="Upwork client, Nov 2015 - Dec 2015"
+          titleCard={translate('VP2Home_01')}
+          paragraph={translate('VP2Home_02')}
           backgroudColor="#27BED5"
           iconColor="white"
           icon="format_quote"
         />
         <VerticalPanelsV2
-          titleCard="Renata has confirmed her language knowledge, and has shown professionalism, flexibility and responsibility. Our team has had positive experiences from this collaboration since 2013, and she has become a valuable member of our staff of freelance translators."
-          paragraph="Silvia Bongirolami - Community Manager - Translated Dec.2019"
+          titleCard={translate('VP2Home_03')}
+          paragraph={translate('VP2Home_04')}
           backgroudColor="#E80E9F"
           iconColor="white"
           icon="format_quote"
         />
         <VerticalPanelsV2
-          titleCard="Localization of a Personality App Completed Successfully!"
-          paragraph="Upwork client, Mar 2020 - Apr 2020"
+          titleCard={translate('VP2Home_05')}
+          paragraph={translate('VP2Home_06')}
           backgroudColor="#FCB434"
           iconColor="white"
           icon="format_quote"

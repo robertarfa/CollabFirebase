@@ -28,7 +28,7 @@ const Menu = () => {
   return (
     <I18nPropvider locale={locale} >
       <main>
-        <section>
+        <section className={css.section}>
           <Navbar expand="md">
             <Navbar.Brand>
               <header className={css.logoDiv}>
