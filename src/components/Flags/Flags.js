@@ -14,11 +14,11 @@ export default function Flags() {
 
     const language = code;
     switch (language) {
-      case 'br': return dispatch(onChangeLanguage({ field: 'language', value: LOCALES.PORTUGUESE })); break;
-      case 'us': return dispatch(onChangeLanguage({ field: 'language', value: LOCALES.ENGLISH })); break;
-      case 'fr': return dispatch(onChangeLanguage({ field: 'language', value: LOCALES.FRENCH })); break;
-      case 'de': return dispatch(onChangeLanguage({ field: 'language', value: LOCALES.GERMAN })); break;
-      default: return '--'; break;
+      case 'br': return dispatch(onChangeLanguage({ field: 'language', value: LOCALES.PORTUGUESE }));
+      case 'us': return dispatch(onChangeLanguage({ field: 'language', value: LOCALES.ENGLISH }));
+      case 'fr': return dispatch(onChangeLanguage({ field: 'language', value: LOCALES.FRENCH }));
+      case 'de': return dispatch(onChangeLanguage({ field: 'language', value: LOCALES.GERMAN }));
+      default: return '--';
     }
 
 
@@ -32,7 +32,6 @@ export default function Flags() {
   ]);
 
   const [toggleContents, setToggleContents] = useState(<FlagIcon code={'us'} />);
-  const [selectedCountry, setSelectedCountry] = useState();
 
   return (
     <div className="App">
@@ -41,15 +40,14 @@ export default function Flags() {
           onSelect={eventKey => {
             const { code } = countries.find(({ code }) => eventKey === code);
 
-            setSelectedCountry(eventKey);
             setToggleContents(<FlagIcon code={code} />);
           }}
         >
-          <Dropdown.Toggle id="dropdown-flags" className="text-left mx-3 my-2 w-auto" style={{ width: 300, background: 'transparent', border: 'none', color: 'black' }}>
+          <Dropdown.Toggle id="dropdown-flags" className="mx-3 my-2 w-auto" style={{ background: 'transparent', border: 'none', color: 'black' }}>
             {toggleContents}
           </Dropdown.Toggle>
 
-          <Dropdown.Menu>
+          <Dropdown.Menu >
             {countries.map(({ code, title }) => (
               <Dropdown.Item key={code} eventKey={code} onClick={() => fntOnChangeLanguage(code)}><FlagIcon code={code} /></Dropdown.Item>
             ))}
@@ -59,12 +57,4 @@ export default function Flags() {
     </div>
   );
 
-
-  // return (
-  //   <div>
-  //     <button onClick={() => fntOnChangeLanguage(LOCALES.ENGLISH)}>English</button>
-  //     <button onClick={() => fntOnChangeLanguage(LOCALES.FRENCH)}>French</button>
-  //     <button onClick={() => fntOnChangeLanguage(LOCALES.GERMAN)}>German</button>
-  //   </div>
-  // )
 }

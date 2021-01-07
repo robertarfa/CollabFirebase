@@ -7,7 +7,7 @@ import { HomeCarousel } from '../../components/HomeCarousel/HomeCarousel'
 import HorizontalPanelNoBack from '../../components/HorizontalPanelNoBack/HorizontalPanelNoBack'
 import VerticalPanelsV2 from '../../components/VerticalPanelsV2/VerticalPanelsV2'
 
-import { FormattedMessage } from "react-intl";
+// import { FormattedMessage } from "react-intl";
 import { I18nPropvider } from '../../i18nProvider';
 import translate from "../../i18nProvider/translate";
 import { useSelector } from 'react-redux'
@@ -80,8 +80,8 @@ export default function Home() {
         txtButton={translate('HPNBHome_03')}
       />
 
-      <HorizontalPanelHalf
-      />
+      {/* <HorizontalPanelHalf
+      /> */}
 
       <div className={css.allCards}>
         <VerticalPanelsV2

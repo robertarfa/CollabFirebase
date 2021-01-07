@@ -10,7 +10,7 @@ import logo from '../../assets/logo.svg';
 
 import Flags from '../Flags/Flags'
 
-import { FormattedMessage } from "react-intl";
+// import { FormattedMessage } from "react-intl";
 import { I18nPropvider } from '../../i18nProvider';
 import translate from "../../i18nProvider/translate";
 
