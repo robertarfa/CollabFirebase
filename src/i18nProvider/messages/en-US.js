@@ -35,6 +35,13 @@ export default {
     'VP2Home_04': "Silvia Bongirolami - Community Manager - Translated Dec.2019",
     'VP2Home_05': "Localization of a Personality App Completed Successfully!",
     'VP2Home_06': "Upwork client, Mar 2020 - Apr 2020",
+    //Carousel
+    'CHome_01': 'Collab',
+    'CHome_02': 'Translation',
+    'CHome_03': 'has the experience and skills necessary to tackle just about every type of needs our customers may have.',
+    'CHome_04': 'is committed to taking your company to the top, especially when it comes to localizing your content.',
+    'CHome_05': 'has been one of the most trusted names in the industry. It will be a pleasure to collaborate with you.',
+
 
   },
 };

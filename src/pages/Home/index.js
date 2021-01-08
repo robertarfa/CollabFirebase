@@ -11,7 +11,7 @@ import VerticalPanelsV2 from '../../components/VerticalPanelsV2/VerticalPanelsV2
 import { I18nPropvider } from '../../i18nProvider';
 import translate from "../../i18nProvider/translate";
 import { useSelector } from 'react-redux'
-// import HorizontalPanelHalf from '../../components/HorizontalPanelHalf/HorizontalPanelHalf'
+import HorizontalPanelHalf from '../../components/HorizontalPanelHalf/HorizontalPanelHalf'
 
 export default function Home() {
   const [locale, setLocale] = useState()
@@ -80,8 +80,8 @@ export default function Home() {
         txtButton={translate('HPNBHome_03')}
       />
 
-      {/* <HorizontalPanelHalf
-      /> */}
+      <HorizontalPanelHalf
+      />
 
       <div className={css.allCards}>
         <VerticalPanelsV2

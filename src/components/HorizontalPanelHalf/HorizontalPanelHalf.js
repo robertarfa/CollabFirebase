@@ -5,9 +5,9 @@ import { CardsContainer } from './styled'
 const HorizontalPanelHalf = () => {
   return (
 
-    <CardsContainer>
+    <CardContainer>
       oi
-    </CardsContainer>
+    </CardContainer>
 
   );
 }
