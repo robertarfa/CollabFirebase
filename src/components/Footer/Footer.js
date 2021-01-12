@@ -7,7 +7,7 @@ import translated from './../../assets/translated_logo_primary.webp'
 import ata from './../../assets/ATA_logo_web_corp.webp'
 // import { FormattedMessage } from "react-intl";
 import { I18nPropvider } from '../../i18nProvider';
-import translate from "../../i18nProvider/translate";
+// import translate from "../../i18nProvider/translate";
 
 const Footer = () => {
 
