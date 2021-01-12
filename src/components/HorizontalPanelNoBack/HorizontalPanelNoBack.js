@@ -9,9 +9,11 @@ export default function HorizontalPanelNoBack(props) {
     <section id="home-container" className={css.homeContainer}>
       <h1 className={`${css.pHome}`}> {h1paragraph}</h1>
       <h3>{firstParagraph}</h3>
-      <Button className={css.button} variant="warning">
-        {txtButton}
-      </Button>
+      <a href='https://wa.me/393714156528' target='blank'>
+        <Button className={css.button} variant="warning">
+          {txtButton}
+        </Button>
+      </a>
     </section>
   )
 }

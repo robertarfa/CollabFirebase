@@ -10,9 +10,13 @@ export default function HorizontalPanel(props) {
       <h1 className={`${css.pHome} h1`}> {h1paragraph}</h1>
       <h3 className="h4">{firstParagraph}</h3>
       <h3 className="h4">{secParagraph}</h3>
-      <Button className={css.button} variant="warning">
-        {txtButton}
-      </Button>
+
+      <a href='https://wa.me/393714156528' target='blank'>
+        <Button className={css.button} variant="warning" >
+          {txtButton}
+        </Button>
+      </a>
+
     </section>
   )
 }
