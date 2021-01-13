@@ -6,12 +6,12 @@ import VerticalPanels from '../../components/VerticalPanels/VerticalPanels'
 import { HomeCarousel } from '../../components/HomeCarousel/HomeCarousel'
 import HorizontalPanelNoBack from '../../components/HorizontalPanelNoBack/HorizontalPanelNoBack'
 import VerticalPanelsV2 from '../../components/VerticalPanelsV2/VerticalPanelsV2'
+import Footer from '../../components/Footer/Footer'
 
 // import { FormattedMessage } from "react-intl";
 import { I18nPropvider } from '../../i18nProvider';
 import translate from "../../i18nProvider/translate";
 import { useSelector } from 'react-redux'
-import Footer from '../../components/Footer/Footer'
 
 export default function Home() {
   const [locale, setLocale] = useState()
