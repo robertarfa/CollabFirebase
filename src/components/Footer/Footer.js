@@ -87,7 +87,8 @@ const Footer = () => {
           </LineAdressNoBoldContainer>
 
           <LineAdressNoBoldContainer marginTop={'30px'}>
-            © 2020 by CollabTranslation. VAT Number IT09459831211
+            © 2020 by CollabTranslation. <br />
+            VAT Number IT09459831211
           </LineAdressNoBoldContainer>
 
         </AdressContainer>
