@@ -5,6 +5,7 @@ import { onChangeLanguage } from '../../services/store/reducers/languageReducer'
 import Dropdown from 'react-bootstrap/Dropdown';
 import { Form } from 'react-bootstrap';
 import FlagIcon from '../FlagIcon/FlagIcon';
+import { FlagContainer } from './styled'
 
 export default function Flags() {
 
@@ -34,7 +35,7 @@ export default function Flags() {
   const [toggleContents, setToggleContents] = useState(<FlagIcon code={'us'} />);
 
   return (
-    <div className="App">
+    <FlagContainer>
       <Form>
         <Dropdown
           onSelect={eventKey => {
@@ -54,7 +55,7 @@ export default function Flags() {
           </Dropdown.Menu>
         </Dropdown>
       </Form>
-    </div>
+    </FlagContainer>
   );
 
 }

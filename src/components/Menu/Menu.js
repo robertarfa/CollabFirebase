@@ -4,6 +4,8 @@ import { useSelector } from 'react-redux';
 import css from './menu.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import { NavContainer } from './styled'
+
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import logo from '../../assets/logo.svg';
@@ -29,42 +31,44 @@ const Menu = () => {
     <I18nPropvider locale={locale} >
       <main>
         <section className={css.section}>
-          <Navbar expand="md">
-            <Navbar.Brand>
-              <header className={css.logoDiv}>
-                <img src={logo} alt="CollabTranslation" />
-              </header>
-            </Navbar.Brand>
+          <NavContainer>
+            <Navbar expand="md">
+              <Navbar.Brand>
+                <header className={css.logoDiv}>
+                  <img src={logo} alt="CollabTranslation" />
+                </header>
+              </Navbar.Brand>
 
-            <Navbar.Toggle />
-            <Navbar.Collapse>
-              <Nav className="xs-auto">
-                <Nav.Link className={css.link} href="/">
-                  {translate('Menu_01')}
-                </Nav.Link>
+              <Navbar.Toggle />
+              <Navbar.Collapse>
+                <Nav className="xs-auto">
+                  <Nav.Link className={css.link} href="/">
+                    {translate('Menu_01')}
+                  </Nav.Link>
 
-                <Nav.Link className={css.link} href="/Services">
-                  {translate('Menu_02')}
-                </Nav.Link>
+                  <Nav.Link className={css.link} href="/Services">
+                    {translate('Menu_02')}
+                  </Nav.Link>
 
-                <Nav.Link className={css.link} href="/Prices">
-                  {translate('Menu_03')}
-                </Nav.Link>
+                  <Nav.Link className={css.link} href="/Prices">
+                    {translate('Menu_03')}
+                  </Nav.Link>
 
-                <Nav.Link className={css.link} href="/AboutUs">
-                  {translate('Menu_04')}
-                </Nav.Link>
+                  <Nav.Link className={css.link} href="/AboutUs">
+                    {translate('Menu_04')}
+                  </Nav.Link>
 
-                <Nav.Link className={css.link} href="/Associations">
-                  {translate('Menu_05')}
-                </Nav.Link>
+                  <Nav.Link className={css.link} href="/Associations">
+                    {translate('Menu_05')}
+                  </Nav.Link>
 
-                <Nav.Link className={css.link} href="/Terms">
-                  {translate('Menu_06')}
-                </Nav.Link>
-              </Nav>
-            </Navbar.Collapse>
-          </Navbar>
+                  <Nav.Link className={css.link} href="/Terms">
+                    {translate('Menu_06')}
+                  </Nav.Link>
+                </Nav>
+              </Navbar.Collapse>
+            </Navbar>
+          </NavContainer>
 
           <Flags />
         </section>

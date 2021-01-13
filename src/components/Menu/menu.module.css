@@ -1,6 +1,11 @@
 .section {
   display: flex;
-  align-items: center;
+}
+
+@media (min-width: 700px) {
+  .section {
+    align-items: center;
+  }
 }
 
 .logoDiv img {
