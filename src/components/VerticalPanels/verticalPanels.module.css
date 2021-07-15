@@ -1,0 +1,43 @@
+.myCard {
+  min-width: 25%;
+  min-height: 400px;
+  text-align: center;
+  color: white;
+  margin: 1px 1px;
+  padding: 30px 20px;
+  position: relative;
+}
+
+.myCard a {
+  position: absolute;
+  bottom: 5%;
+
+  text-decoration: none;
+  color: black;
+}
+
+.myCard:nth-child(3),
+.myCard:nth-child(4) {
+  min-width: 25%;
+  min-height: 400px;
+  text-align: center;
+  color: black;
+  margin: 1px 1px;
+  padding: 30px 20px;
+}
+
+.myCard:nth-child(3) .litleTitle {
+  color: #ff9a00;
+}
+
+.myCard:nth-child(4) .litleTitle {
+  color: white;
+}
+
+.myCard .litleTitle {
+  padding: 10px 5px;
+}
+
+.myCard p {
+  padding: 40px 0;
+}

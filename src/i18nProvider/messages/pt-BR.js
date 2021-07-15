@@ -2,8 +2,11 @@ import { LOCALES } from '../constants';
 
 export default {
   [LOCALES.PORTUGUESE]: {
-    'edit-file': 'Edit {file} and save to reload.',
-    'Home_01': 'Olá',
-
+    'Menu_01': "Home",
+    'Menu_02': "Serviços",
+    'Menu_03': "Preços e Combos",
+    'Menu_04': "Sobre Nós",
+    'Menu_05': "Associações & Certificados",
+    'Menu_06': "Termos & Condições",
   },
 };

@@ -1,0 +1,15 @@
+.carouselContainer {
+  height: 350px;
+  background-color: #808080;
+}
+
+.carouselP,
+.carouselSpan {
+  padding: 8% 0;
+  font-size: 1.5rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.carouselSpan {
+  color: #ff9a00;
+}

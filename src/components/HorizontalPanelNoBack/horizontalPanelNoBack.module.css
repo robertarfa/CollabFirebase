@@ -1,0 +1,28 @@
+.homeContainer {
+  background-color: #f8f8f8;
+  /* background-size: 100% 250%; */
+  text-align: center;
+  opacity: 0.9;
+  padding: 10px;
+  height: 350px;
+}
+
+.homeContainer h1:first-child {
+  font-weight: bold;
+  padding-top: 40px;
+  font-size: 2rem;
+  color: #ff9a00;
+}
+
+.homeContainer h3 {
+  margin-top: 60px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.button {
+  margin: 50px;
+  color: white;
+  font-weight: bold;
+  background-color: #ff9a00;
+}
