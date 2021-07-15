@@ -1,0 +1,25 @@
+.section {
+  display: flex;
+}
+
+@media (min-width: 700px) {
+  .section {
+    align-items: center;
+  }
+}
+
+.logoDiv img {
+  width: 200px;
+  margin: 0 50px 20px 80px;
+  padding: 1%;
+}
+
+.menuDiv {
+  display: flex;
+  align-items: center;
+  margin: 1% 0 0 0;
+}
+
+.menuDiv .link {
+  font-weight: 700;
+}
